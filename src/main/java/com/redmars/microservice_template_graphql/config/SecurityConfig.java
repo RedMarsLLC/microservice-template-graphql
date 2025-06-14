@@ -36,8 +36,8 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable()) // 🔄 Modern way to disable CSRF
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/graphiql", "/graphql").permitAll()
-                .anyRequest().authenticated()
+                .requestMatchers("/graphiql").permitAll() // allow graphiql
+                .anyRequest().authenticated()                         // require login for everything else, including /graphql
             )
             .formLogin(form -> form
             .defaultSuccessUrl("/graphiql", true)); // 👈 redirect to GraphiQL always after login
