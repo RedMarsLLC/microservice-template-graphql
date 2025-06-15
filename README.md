@@ -1,4 +1,4 @@
-# 🛰️ microservice-template-graphql
+# microservice-template-graphql
 
 **A production-ready Spring Boot + GraphQL microservice template from RedMars Labs**  
 Built for secure, modular backend development with baked-in authentication, GraphiQL support, and extendable architecture.
